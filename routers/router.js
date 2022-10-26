@@ -13,9 +13,6 @@ module.exports = (app) => {
     app.route("/operation/divide").get(calculator.divideOperation);
     app.route("/operation/addByList").get(calculator.addByList);
 
-    //app.route("/operation/bedmas").get(calculator.bedmas);
-
-    
     //GET request
     app.get("/test", (req, res) => {
         res.send("Hello World 1");
