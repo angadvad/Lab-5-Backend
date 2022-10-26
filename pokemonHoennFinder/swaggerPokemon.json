@@ -1,0 +1,59 @@
+{
+    "openapi" : "3.0.3" ,
+    "info" : {
+    "version" : "1.0.0" ,
+    "title" : "My User Project CRUD" ,
+    "description" : "My User Project Application API" ,
+    "license" : {
+    "name" : "MIT" ,
+    "url" : "https://opensource.org/licenses/MIT"
+    }
+    },
+    "host" : "localhost:3000" ,
+    "basePath" : "/" ,
+    "tags" : [
+    {
+    "name" : "Hoenn Pokemon Finder" ,
+    "description" : " "
+    }
+    ],
+    "schemes" : [ "http" ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "paths": {
+        "/hoenn": {
+            "get": {
+                "tags": [
+                    "Hoenn Pokemon Finder Service"
+                ],
+                "summary": "Hoenn",
+                "parameters": [
+                    
+                ],
+                "responses":{
+                    "200": {
+                        "description": "This service returns info about all Hoenn Pokemon"
+                    }
+                }
+            }
+        },
+        "/fetchPokemon": {
+            "get": {
+                "tags": [
+                    "Individual Fetch Service"
+                ],
+                "summary": "Fetch Pokemon Data",
+                "parameters": [
+                    {
+                        "url":"url"
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "This service allows you to fetch all individual Pokemon"
+                    }
+                }
+            }
+        }
+    }
+}
