@@ -13,6 +13,8 @@ app.use(
   swaggerUi.setup(swaggerSetup)
 ); //swagger app @ http://localhost:3000/api-docs/
 
+app.use('/', express.static('public')) //map everything in the public folder to the root endpoint, so it will load index.html at http://localhost:3000/
+
 
 routes(app); //register the route
 

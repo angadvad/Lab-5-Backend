@@ -11,6 +11,7 @@ exports.fetchHoennPokemon = (req, res) => {
     fetch('https://pokeapi.co/api/v2/pokedex/hoenn')
       .then((res) => res.json())
       .then((json) => {
+        //excellent - the controller is a perfect place to filter the json from an external API into a better format for your app
         json.pokemon_entries.forEach(item => {
           let url = item.pokemon_species.url;
           url = url.replace('-species', '');
@@ -18,6 +19,7 @@ exports.fetchHoennPokemon = (req, res) => {
           url_data.unshift(url);
           pokemon_name_data.unshift(str);
         });
+        console.log(pokemon_name_data)
         res.status(200);
         res.json({ success: true, data: { url_data, pokemon_name_data } });
       });
@@ -41,6 +43,7 @@ exports.fetchPokemon = (req, res) => {
         let id = pokeData.id;
         let name = pokeData.name;
         let types = pokeData.types;
+        console.log({id, name, types, url})
         res.json({ success: true, data: {id, name, types, url} });
       }
       )

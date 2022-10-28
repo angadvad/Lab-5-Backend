@@ -49,9 +49,9 @@
         "/operation/subtract": {
             "get": {
                 "tags": [
-                    "Addition Service"
+                    "Subtraction Service"
                 ],
-                "summary": "Add 2 Numbers together",
+                "summary": "Subtract 2 Numbers together",
                 "parameters": [
                     {
                         "name":"number1",
@@ -66,7 +66,57 @@
                 ],
                 "responses":{
                     "200": {
-                        "description": "This service allows you to add two numbers togeather"
+                        "description": "This service allows you to subtract two numbers togeather"
+                    }
+                }
+            }
+        },
+        "/operation/multiply": {
+            "get": {
+                "tags": [
+                    "Multiplication Service"
+                ],
+                "summary": "Multiply 2 Numbers together",
+                "parameters": [
+                    {
+                        "name":"number1",
+                        "in":"query",
+                        "description": "the First Number"
+                    },
+                    {
+                        "name":"number2",
+                        "in":"query",
+                        "description": "the Second Number"
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "This service allows you to multiply two numbers togeather"
+                    }
+                }
+            }
+        },
+        "/operation/divide": {
+            "get": {
+                "tags": [
+                    "Division Service"
+                ],
+                "summary": "Divide 2 Numbers together",
+                "parameters": [
+                    {
+                        "name":"number1",
+                        "in":"query",
+                        "description": "the First Number"
+                    },
+                    {
+                        "name":"number2",
+                        "in":"query",
+                        "description": "the Second Number"
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "This service allows you to divide two numbers togeather"
                     }
                 }
             }
