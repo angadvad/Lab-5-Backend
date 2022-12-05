@@ -12,11 +12,12 @@ module.exports = (app) => {
     let controller = require ("../controllers/controller.js")
 
     app.use(cors());
-    app.use(express.static('./'))
+    //app.use(express.static('./'))
+    //instead, just use the static file mapping to public folder in server.js
 
-    app.get("/", (req, res) => {
-        res.sendFile('C:/Users/Angad/Desktop/IoD_Projects/Lab-5-Backend/pokemonHoennFinder/index.html');
-    });
+    // app.get("/", (req, res) => {
+    //     res.sendFile('C:/Users/Angad/Desktop/IoD_Projects/Lab-5-Backend/pokemonHoennFinder/index.html');
+    // });
 
     app.route("/hoenn").get(controller.fetchHoennPokemon);
     app.route("/fetchPokemon").get(controller.fetchPokemon);

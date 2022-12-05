@@ -3,9 +3,6 @@
 module.exports = (app) => {
     //Root router
     let calculator = require ("../controllers/CalculatorController.js")
-    app.get("/", (req, res) => {
-        res.send("Main Page");
-    });
 
     app.route("/operation/add").get(calculator.addOperation);
     app.route("/operation/subtract").get(calculator.subtractOperation);

@@ -45,12 +45,14 @@
                 "summary": "Fetch Pokemon Data",
                 "parameters": [
                     {
-                        "url":"url"
+                        "name":"url",
+                        "in":"query",
+                        "description": "individual pokemon URL"
                     }
                 ],
                 "responses":{
                     "200": {
-                        "description": "This service allows you to fetch all individual Pokemon"
+                        "description": "This service allows you to fetch an individual Pokemon"
                     }
                 }
             }
